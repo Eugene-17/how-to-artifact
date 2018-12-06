@@ -15,7 +15,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -26,15 +25,26 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+# gem 'devise' for user management
+gem 'devise'
+# gem 'kaminari' for pagination
+gem 'kaminari'
+# gem 'paperclip' to handle image upload
+gem "paperclip", "~> 6.0.0"
+# gem 'aws-sdk' to handle aws s3 file storage
+gem 'aws-sdk', '~> 3'
+# bootstrap
+gem 'bootstrap'
+# js library
+gem 'jquery-rails'
+# html editor
+gem "wysiwyg-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
