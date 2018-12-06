@@ -1,0 +1,68 @@
+@import 'variable';
+
+// top_nav
+top_nav {
+
+  background-color: $color-black-light;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  overflow-y: hidden;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  z-index: 5;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+  // State
+  &.top_nav_up {
+    top: (-$header-height);
+  }
+
+  .top_nav_logo {
+    cursor: pointer;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+  }
+
+  .top_nav_container {
+    alignment: center;
+    width: 1200px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .top_nav_button {
+    font-family: "Open Sans AF",sans-serif;
+    height:100%;
+    float: right;
+    background-color: $color-black-light;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .top_nav_button:hover {
+    background-color: $color-gray;
+    color: white;
+  }
+}
+
+
+

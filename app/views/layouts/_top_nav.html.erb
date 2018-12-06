@@ -1,0 +1,41 @@
+
+<top_nav>
+
+  <div id="login_overlay" class = 'overlay'></div>
+
+  <div id="top_nav" class="top_nav_container">
+
+    <%= link_to root_path, method: :get do %>
+    <%= image_tag("logo_white.png", :class =>"top_nav_logo") %>
+    <% end %>
+
+    <%= link_to about_path, method: :get do %>
+      <button class="top_nav_button">
+        ABOUT
+      </button>
+    <% end %>
+
+    <%= link_to posts_path, method: :get do %>
+    <button class="top_nav_button">
+      NEWS
+    </button>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <button class="top_nav_button">
+          SIGN OUT
+        </button>
+      <% end %>
+
+      <% #if current_user.user_role == 1 %>
+      <% #end %>
+
+      <%else %>
+      <%#= render partial: "layouts/login_btt", layout: "layouts/login_btt" %>
+    <%end %>
+
+
+
+  </div>
+</top_nav>

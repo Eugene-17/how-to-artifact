@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>HowToArtifact</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <% if content_for?(:title) %>
+    <title><%= content_for(:title) %></title>
+  <% else %>
+    <title>How To Artifact</title>
+  <% end %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <%= favicon_link_tag 'logo_small.png' %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
+<%= render partial: "layouts/top_nav", layout: "layouts/top_nav" %>
+<div class = 'page_content'>
+  <div class = 'page_inner'>
     <%= yield %>
-  </body>
+  </div>
+</div>
+</body>
 </html>

@@ -1,0 +1,47 @@
+@import 'variable';
+
+body{
+  background-color: $color-black;
+}
+// Page
+.page_content {
+  padding-top: $header-height;
+  height: 100%;
+}
+
+.page_inner {
+  padding-top: $after-header-padding;
+  alignment: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  color: #FFF;
+  overflow:auto;
+}
+
+.left_content{
+  float: left;
+  width: 66.6666666667%;
+  vertical-align: baseline;
+}
+
+.right_sidebar{
+  float: left;
+  width: 33.3333333333%;
+  padding-left: 50px;
+  vertical-align: baseline;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+}
