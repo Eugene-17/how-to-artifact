@@ -4,14 +4,14 @@
 
     <div class="imgcontainer">
       <span id="modal_close_btt" class="close" title="Close PopUp">&times;</span>
-      <%= image_tag("artifact_logo.png", :class => "top_nav_logo") %>
+      <br>
     </div>
 
     <div class="modal_container">
 
         <ul class="tab-group">
-          <li class="tab active"><a href="#login">Log In</a></li>
-          <li class="tab"><a href="#signup">Sign Up</a></li>
+          <li class="tab active"><a href="#login" class="li_a">Log In</a></li>
+          <li class="tab"><a href="#signup" class="li_a">Sign Up</a></li>
         </ul>
 
         <div class="tab-content">
@@ -19,14 +19,14 @@
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
               <div class="field">
-                <%= f.label :email %><br/><br/>
-                <%= f.email_field :email, autofocus: true %>
+                <%= f.label(:email,:class=>'modal_label')%><br/><br/>
+                <%= f.email_field(:email, autofocus: true, :class =>'modal_input' )%>
               </div>
               <br/>
 
               <div class="field">
-                <%= f.label :password %><br/><br/>
-                <%= f.password_field :password, autocomplete: "off" %>
+                <%= f.label :password ,:class=>'modal_label' %><br/><br/>
+                <%= f.password_field :password, autocomplete: "off" , :class =>'modal_input'%>
               </div>
               <br/>
 
@@ -34,21 +34,21 @@
 
                 <div class="field">
                   <div class='modal_checkbox'>
-                    <%= f.check_box :remember_me %>
+                    <%= f.check_box :remember_me , :class =>'modal_input'%>
 
                   </div>
                   <div class = 'remember_me_text'>
-                    <%= f.label :remember_me %>
+                    <%= f.label :remember_me ,:class=>'modal_label'%>
                   </div>
 
                 </div>
 
               <% end -%>
 
-              <br/><br/><br/><br/>
+              <br/><br/><br/>
 
               <div class = 'login_confirm_btt'>
-                <%= f.submit "LOG IN" %>
+                <%= f.submit "LOG IN", :class =>'modal_input' %>
               </div>
             <% end %>
           </div>
@@ -59,29 +59,33 @@
               <%= devise_error_messages! %>
 
               <div class="field">
-                <%= f.label :email %><br/><br/>
-                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                <%= f.label :email ,:class=>'modal_label' %><br/><br/>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", :class =>'modal_input' %>
               </div>
               <br/>
               <div class="field">
-                <%= f.label :password %><br/><br/>
+                <%= f.label :password ,:class=>'modal_label' %><br/><br/>
                 <% if @minimum_password_length %>
                   <em>(<%= @minimum_password_length %> characters minimum)</em>
                 <% end %>
-                <%= f.password_field :password, autocomplete: "new-password" %>
+                <%= f.password_field :password, autocomplete: "new-password", :class =>'modal_input' %>
               </div>
               <br/>
               <div class="field">
-                <%= f.label :password_confirmation %><br/><br/>
-                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                <%= f.label :password_confirmation,:class=>'modal_label' %><br/><br/>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password" , :class =>'modal_input'%>
               </div>
               <br/><br/>
               <div class="login_confirm_btt">
-                  <%= f.submit "SIGN UP" %>
+                  <%= f.submit "SIGN UP", :class =>'modal_input' %>
               </div>
             <% end %>
           </div>
         </div>
+
+
     </div>
+
   </div>
+
 </div>

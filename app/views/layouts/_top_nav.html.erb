@@ -1,6 +1,6 @@
 
 <top_nav>
-
+  <div id = 'overlay' class = 'overlay'></div>
   <div id="top_nav" class="top_nav_container">
 
     <%= link_to root_path, method: :get do %>
@@ -33,7 +33,10 @@
       <button id='login_btt' class="top_nav_button">
         LOGIN/SIGNUP
       </button>
-      <%#= render partial: "layouts/login_modal", layout: "layouts/login_modal" %>
+
+      <%= render partial: 'layouts/login_btt', layout: 'layouts/login_btt' %>
+      </div>
+
     <%end %>
 
   </div>

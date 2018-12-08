@@ -118,7 +118,7 @@
     display: table;
     clear: both;
   }
-  li a {
+  .li_a {
     display:block;
     text-decoration:none;
     padding:15px;
@@ -145,7 +145,7 @@
   display:none;
 }
 
-label {
+.modal_label {
   position:absolute;
   transform:translateY(6px);
   left:20px;
@@ -160,7 +160,7 @@ label {
   }
 }
 
-label.active {
+.modal_label.active {
   transform:translateY(50px);
   left:2px;
   font-size:14px;
@@ -169,11 +169,11 @@ label.active {
   }
 }
 
-label.highlight {
+.modal_label.highlight {
   color:$color-white;
 }
 
-input, textarea {
+.modal_input {
   font-size:22px;
   display:block;
   width:100%;
@@ -191,32 +191,32 @@ input, textarea {
   }
 }
 
-textarea {
-  border:2px solid $color-gray-light;
-  resize: vertical;
-}
-
-.field-wrap {
-  position:relative;
-  margin-bottom:40px;
-}
-
-.top-row {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  > div {
-    float:left;
-    width:48%;
-    margin-right:4%;
-    &:last-child {
-      margin:0;
-    }
-  }
-}
+//textarea {
+//  border:2px solid $color-gray-light;
+//  resize: vertical;
+//}
+//
+//.field-wrap {
+//  position:relative;
+//  margin-bottom:40px;
+//}
+//
+//.top-row {
+//  &:after {
+//    content: "";
+//    display: table;
+//    clear: both;
+//  }
+//
+//  > div {
+//    float:left;
+//    width:48%;
+//    margin-right:4%;
+//    &:last-child {
+//      margin:0;
+//    }
+//  }
+//}
 
 .button {
   border:0;

@@ -30,4 +30,3 @@ setInterval (->
     didScroll = false
   return
 ), 250
-
