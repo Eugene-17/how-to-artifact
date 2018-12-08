@@ -1,3 +1,159 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'variable';
+@import 'grid';
+
+#home_top_image_container{
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+
+#home_top_image{
+  width: 100%;
+  height: auto;
+}
+
+#top_image_text {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  .site_name{
+    letter-spacing: 0.12em;
+    font-size: 4.1em;
+    font-weight: bold;
+  }
+  .site_title{
+    letter-spacing: 0.07em;
+    font-size: 1.9em;
+    font-weight: bold;
+    color:$site_title_color;
+  }
+}
+
+.top_post_image_container{
+  height: $home_post_cell_height;
+  position: relative;
+  overflow:hidden;
+}
+
+.category_tag {
+  position: absolute;
+  top:0px;
+  left:0px;
+  color: $home_post_tag_color;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1em;
+  line-height: 2em;
+}
+
+.trapezoid_tag {
+  font-family: 'Source Sans Pro', sans-serif;
+  position: absolute;
+  top:0px;
+  left:0px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 47px;
+  height: 0;
+  border-top: 37px solid $home_post_tag_background;
+  border-right: 37px solid rgba(0,0,0,0);
+  border-left: 37px solid $home_post_tag_background;
+}
+
+.top_post_image{
+  width: 100%;
+  height: $home_post_cell_height;
+}
+
+.top_post_title_background{
+  background: $color-black;
+  opacity: 0.7;
+  width:100%;
+  height: $home_post_title_height;
+  position: absolute;
+  bottom:0px;
+  left:0px;
+}
+
+.top_post_title{
+  height: $home_post_title_height;
+  position: absolute;
+  bottom:0px;
+  left:0px;
+  font-size: 1.1em;
+  line-height: 2em;
+  padding-left:10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color:$home_post_title_color;
+}
+
+.top_post_title:hover {
+  text-decoration: underline;
+}
+
+.top_post_author_container{
+  height: $home_post_author_height;
+  background: $home_post_author_background;
+  position: relative;
+  overflow:hidden;
+}
+
+.top_post_time{
+  float: left;
+  font-size: 0.9em;
+  line-height: 1.1em;
+  padding-top:10px;
+  padding-left:10px;
+  color: $home_post_time_color;
+}
+
+.top_post_author{
+  float: left;
+  font-size: 0.9em;
+  line-height: 1.1em;
+  padding-top:10px;
+  padding-left:5px;
+  color: $home_post_author_color;
+}
+
+.top_post_author:hover {
+  text-decoration: underline;
+}
+
+.top_post_snippet{
+  background: $home_post_snippet_background;
+  height: $home_post_snippet_height;
+  padding:10px 10px 10px 10px;
+  overflow: hidden;
+  color: $home_post_snippet_color;
+  text-indent: 30px;
+  text-align : justify;
+}
+
+.read_more_btt{
+  width:100%;
+  height: $read_more_btt_height;
+  background: $read_more_btt_background;
+  border: none;
+  padding: 5px 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color:$read_more_btt_font_color;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.read_more_btt:hover {
+  text-decoration: underline;
+}

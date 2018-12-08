@@ -1,4 +1,125 @@
-<div style="height: 2000px">
-  hello artifact
+<% content_for :title, "How To Artifact" %>
+
+
+<div id='home_top_image_container'>
+  <%= image_tag('home_top_image.jpg', :id => 'home_top_image') %>
+  <div id='top_image_text'>
+    <div class='site_name'>
+      HOW TO ARTIFACT
+    </div>
+    <div class='site_title'>
+      ARTIFACT NEWS AND GUIDES
+    </div>
+  </div>
 </div>
 
+<div class='left_content'>
+
+  <div class = 'left_content_title'>
+    Featured Artifact News
+  </div>
+
+  <div class='left_half'>
+    <div class='top_post_image_container'>
+      <div class='hover_zoom_in'>
+        <%= link_to post_path(@top_news), method: :get do %>
+          <figure>
+            <%= image_tag(@post_images.where(post_id: @top_news.id).first.image.url, :class => 'top_post_image') %>
+          </figure>
+        <% end %>
+      </div>
+      <div class='trapezoid_tag'>
+      </div>
+      <%= link_to news_index_path, method: :get do %>
+        <div class='category_tag'>
+          NEWS
+        </div>
+      <% end %>
+      <div class='top_post_title_background'>
+      </div>
+      <%= link_to post_path(@top_news), method: :get do %>
+        <div class='top_post_title'>
+          <%= @top_news.title %>
+        </div>
+      <% end %>
+    </div>
+    <div class='top_post_author_container'>
+      <div class='top_post_time'>
+        <%= @top_news.created_at.strftime("%F") + ' | ' %>
+      </div>
+      <%= link_to user_path(@top_news.user_id), method: :get do %>
+      <div class='top_post_author'>
+        <%= @author.where(id: @top_news.user_id).first.nickname.blank? ?
+                @author.where(id: @top_news.user_id).first.email : @author.where(id: @top_news.user_id).first.nickname
+        %>
+      </div>
+      <% end %>
+    </div>
+    <div class='top_post_snippet'>
+      <%= @top_news.snippet %>
+    </div>
+    <%= link_to post_path(@top_news), method: :get do %>
+      <button class="read_more_btt">
+        READ FULL ARTICLE
+      </button>
+    <% end %>
+  </div>
+
+
+  <div class='right_half'>
+    <div class='top_post_image_container'>
+      <div class='hover_zoom_in'>
+        <%= link_to post_path(@top_guide), method: :get do %>
+          <figure>
+            <%= image_tag(@post_images.where(post_id: @top_guide.id).first.image.url, :class => 'top_post_image') %>
+          </figure>
+        <% end %>
+      </div>
+      <div class='trapezoid_tag'>
+      </div>
+      <%= link_to guides_index_path, method: :get do %>
+        <div class='category_tag'>
+          GUIDE
+        </div>
+      <% end %>
+      <div class='top_post_title_background'>
+      </div>
+      <%= link_to post_path(@top_guide), method: :get do %>
+        <div class='top_post_title'>
+          <%= @top_guide.title %>
+        </div>
+      <% end %>
+    </div>
+    <div class='top_post_author_container'>
+      <div class='top_post_time'>
+        <%= @top_guide.created_at.strftime("%F") + ' | ' %>
+      </div>
+      <%= link_to user_path(@top_guide.user_id), method: :get do %>
+        <div class='top_post_author'>
+          <%= @author.where(id: @top_guide.user_id).first.nickname.blank? ?
+                  @author.where(id: @top_guide.user_id).first.email : @author.where(id: @top_guide.user_id).first.nickname
+          %>
+        </div>
+      <% end %>
+    </div>
+    <div class='top_post_snippet'>
+      <%= @top_guide.snippet %>
+    </div>
+    <%= link_to post_path(@top_guide), method: :get do %>
+      <button class="read_more_btt">
+        READ FULL ARTICLE
+      </button>
+    <% end %>
+  </div>
+</div>
+
+<div class='right_sidebar'>
+  <div class = 'right_sidebar_title'>
+    Deck of the day
+  </div>
+  COMING SOON
+</div>
+
+<div style='height:1000px'>
+
+</div>

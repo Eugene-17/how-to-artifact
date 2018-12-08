@@ -5,12 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Snippet</th>
-      <th>Content</th>
-      <th>Featured</th>
-      <th>User</th>
-      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +12,6 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= post.snippet %></td>
-        <td><%= post.content %></td>
-        <td><%= post.featured %></td>
-        <td><%= post.user %></td>
-        <td><%= post.category %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

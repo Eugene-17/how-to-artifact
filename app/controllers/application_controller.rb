@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
 
+  protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+
   def resource_name
     :user
   end
@@ -19,5 +23,11 @@ class ApplicationController < ActionController::Base
     User
   end
   helper_method :resource_class
+
+  protected
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password) }
+      devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:nickname,:firstname,:lastname, :email, :password, :current_password, :gender,:birthday,:description,:avatar) }
+    end
 
 end

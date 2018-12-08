@@ -1,19 +1,24 @@
 @import 'variable';
 
 body{
-  background-color: $color-black;
+  //background-color: $body_background;
+  background-image: $stary_background;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
 }
 // Page
 .page_content {
-  padding-top: $header-height;
+  padding-top: $top_nav_height;
   height: 100%;
-  background-color: $color-black;
 }
 
 .page_inner {
-  padding-top: $after-header-padding;
+  padding-top: $after_top_nav_padding;
+  //background: $page_inner_background;
+  background-image: $content_background;
   alignment: center;
-  width: 1200px;
+  max-width: $side_width;
   margin-left: auto;
   margin-right: auto;
   font-size: 1em;
@@ -21,10 +26,40 @@ body{
   overflow:auto;
 }
 
+
+.right_sidebar_title, .left_content_title{
+  width: 100%;
+  padding-left:33px;
+  padding-top:33px;
+  padding-bottom:33px;
+  color: $content_title_color;
+  font-family: $content_title_font;
+  font-size: $content_title_size;
+}
+
+
 .left_content{
   float: left;
   width: 66.6666666667%;
   vertical-align: baseline;
+
+  .left_half{
+    float: left;
+    padding-right: 10px;
+    width: 50%;
+    vertical-align: baseline;
+  }
+
+  .right_half{
+    float: left;
+    padding-left: 10px;
+    width: 50%;
+    vertical-align: baseline;
+  }
+}
+
+.left_content_title{
+
 }
 
 .right_sidebar{
@@ -45,4 +80,30 @@ body{
   bottom: 0;
   background-color: rgba(0,0,0,0.5); /* Black background with opacity */
   z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.page_footer {
+  max-width:100%;
+  height:$footer-height;   /* Height of the footer */
+
+  .footer_container{
+    background:$footer_background;
+    alignment: center;
+    max-width: $side_width;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: $footer_font_color;
+    font-family: $footer_font;
+    font-size: $footer_font_size;
+  }
+  
+  .footer_right{
+    float: right;
+    padding-right: 20px;
+  }
+  .footer_left{
+    float: left;
+    padding-left: 20px;
+  }
 }

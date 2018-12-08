@@ -1,0 +1,15 @@
+// Place all the styles related to the Post_images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hover_zoom_in figure img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.hover_zoom_in figure:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+

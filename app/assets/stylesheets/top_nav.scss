@@ -2,17 +2,17 @@
 
 // top_nav
 top_nav {
-  background-color: $color-black-light;
+  background-color: $top_nav_background;
   width: 100%;
   position: fixed;
   right: 0;
   overflow-y: hidden;
-  height: $header-height;
+  height: $top_nav_height;
   position: fixed;
   top: 0;
   transition: top 0.2s ease-in-out;
   z-index: 5;
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: $side_width) {
     width: 100%;
   }
   @media only screen and (max-width: 768px) {
@@ -20,7 +20,7 @@ top_nav {
   }
   // State
   &.top_nav_up {
-    top: (-$header-height);
+    top: (-$top_nav_height);
   }
 
   .top_nav_logo {
@@ -33,19 +33,19 @@ top_nav {
 
   .top_nav_container {
     alignment: center;
-    width: 1200px;
+    max-width: $side_width;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
   }
 
   .top_nav_button {
-    font-family: "Open Sans AF",sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     height:100%;
     float: right;
-    background-color: $color-black-light;
+    background-color: $top_nav_button_background;
     border: none;
-    color: white;
+    color: $top_nav_button_font_color;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -57,8 +57,8 @@ top_nav {
   }
 
   .top_nav_button:hover {
-    background-color: $color-gray;
-    color: white;
+    background-color: $top_nav_button_hover;
+    color: $top_nav_button_font_color;
   }
 }
 

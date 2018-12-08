@@ -1,15 +1,46 @@
-// Header
-$header-height: 93px;
-$after-header-padding: 47px;
+
 
 // Colors
+$color-pure-black: #000;
+$color-black-heavy: #0f0f0f;
 $color-black: #1c1c1c;
 $color-black-light: #232323;
 $color-gray: #888B8D;
 $color-gray-light: #ddd;
 $color-white: #fff;
 $color-artifact: #BEA369;
+$color-artifact-light: #f4dfb4;
 $form-bg: #13232f;
+
+// Image
+
+$stary_background: image-url('stary_background2.jpg');
+$content_background: image-url('page_inner.jpg');
+
+////////////
+//Variable//
+////////////
+
+$side_width: 1200px;
+
+//Top nav
+$top_nav_background: $color-black;
+$top_nav_button_background: $color-black;
+$top_nav_button_hover: $color-gray;
+$top_nav_button_font_color: $color-artifact-light;
+$top_nav_height: 74px;
+$after_top_nav_padding: 0px;
+
+//Page content
+$body_background: $color-pure-black;
+$page_inner_background: $color-black;
+
+//footer
+$footer-height: 43px;
+$footer_background: $color-black;
+$footer_font: "Lato AF",sans-serif;
+$footer_font_size: 1 em;
+$footer_font_color: $color-artifact-light;
 
 // Fonts
 $font-base: 'Montserrat', sans-serif;
@@ -19,6 +50,35 @@ $normal: 400;
 $bold: 600;
 $br: 4px;
 
+
+// Home
+
+$site_title_color: $color-artifact-light;
+
+$home_post_cell_height: 225px;
+
+$content_title_color: $color-white;
+$content_title_font: 'Montserrat', sans-serif;
+$content_title_size: 1.5em;
+
+$home_post_tag_color: $color-white;
+$home_post_tag_background: $color-artifact;
+
+$home_post_title_height:43px;
+$home_post_title_color: $color-white;
+
+$home_post_snippet_height:177px;
+$home_post_snippet_background: $color-black-heavy;
+$home_post_snippet_color: $color-white;
+
+$home_post_author_height:36px;
+$home_post_author_background: $color-black-heavy;
+$home_post_time_color: $color-white;
+$home_post_author_color: $color-artifact;
+
+$read_more_btt_height: 43px;
+$read_more_btt_background: $color-artifact;
+$read_more_btt_font_color: $color-white;
 
 
 
