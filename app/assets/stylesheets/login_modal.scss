@@ -191,32 +191,10 @@
   }
 }
 
-//textarea {
-//  border:2px solid $color-gray-light;
-//  resize: vertical;
-//}
-//
-//.field-wrap {
-//  position:relative;
-//  margin-bottom:40px;
-//}
-//
-//.top-row {
-//  &:after {
-//    content: "";
-//    display: table;
-//    clear: both;
-//  }
-//
-//  > div {
-//    float:left;
-//    width:48%;
-//    margin-right:4%;
-//    &:last-child {
-//      margin:0;
-//    }
-//  }
-//}
+.modal_error_text{
+  color:red;
+  font-size: 1.2em;
+}
 
 .button {
   border:0;
