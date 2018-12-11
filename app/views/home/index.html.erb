@@ -19,97 +19,108 @@
     Featured Artifact News
   </div>
 
-  <div class='left_half'>
-    <div class='top_post_image_container'>
-      <div class='hover_zoom_in'>
+  <div class = 'content_container'>
+    <div class='left_half'>
+      <div class='top_post_image_container'>
+        <div class='hover_zoom_in'>
+          <%= link_to post_path(@top_news), method: :get do %>
+            <figure>
+              <%= image_tag(@post_images.where(post_id: @top_news.id).first.image.url, :class => 'top_post_image') %>
+            </figure>
+          <% end %>
+        </div>
+        <div class='trapezoid_tag'>
+        </div>
+        <%= link_to news_index_path, method: :get do %>
+          <div class='category_tag'>
+            NEWS
+          </div>
+        <% end %>
+        <div class='top_post_title_background'>
+        </div>
         <%= link_to post_path(@top_news), method: :get do %>
-          <figure>
-            <%= image_tag(@post_images.where(post_id: @top_news.id).first.image.url, :class => 'top_post_image') %>
-          </figure>
+          <div class='top_post_title'>
+            <div class = 'top_post_title_scroll_text'>
+              <%= @top_news.title %>
+            </div>
+          </div>
         <% end %>
       </div>
-      <div class='trapezoid_tag'>
-      </div>
-      <%= link_to news_index_path, method: :get do %>
-        <div class='category_tag'>
-          NEWS
+      <div class='top_post_author_container'>
+        <div class='top_post_time'>
+          <%= @top_news.created_at.strftime("%F") + ' | ' %>
         </div>
-      <% end %>
-      <div class='top_post_title_background'>
+        <%= link_to user_path(@top_news.user_id), method: :get do %>
+          <div class='top_post_author'>
+            <%= @author.where(id: @top_news.user_id).first.nickname.blank? ?
+                    @author.where(id: @top_news.user_id).first.email : @author.where(id: @top_news.user_id).first.nickname
+            %>
+          </div>
+        <% end %>
+      </div>
+      <div class='top_post_snippet'>
+        <%= @top_news.snippet %>
       </div>
       <%= link_to post_path(@top_news), method: :get do %>
-        <div class='top_post_title'>
-          <%= @top_news.title %>
+        <button class="read_more_btt">
+          READ FULL ARTICLE
+        </button>
+      <% end %>
+    </div>
+
+
+    <div class='right_half'>
+      <div class='top_post_image_container'>
+        <div class='hover_zoom_in'>
+          <%= link_to post_path(@top_guide), method: :get do %>
+            <figure>
+              <%= image_tag(@post_images.where(post_id: @top_guide.id).first.image.url, :class => 'top_post_image') %>
+            </figure>
+          <% end %>
         </div>
+        <div class='trapezoid_tag'>
+        </div>
+        <%= link_to guides_index_path, method: :get do %>
+          <div class='category_tag'>
+            GUIDE
+          </div>
+        <% end %>
+        <div class='top_post_title_background'>
+        </div>
+        <%= link_to post_path(@top_guide), method: :get do %>
+          <div class='top_post_title'>
+            <%= @top_guide.title %>
+          </div>
+        <% end %>
+      </div>
+      <div class='top_post_author_container'>
+        <div class='top_post_time'>
+          <%= @top_guide.created_at.strftime("%F") + ' | ' %>
+        </div>
+        <%= link_to user_path(@top_guide.user_id), method: :get do %>
+          <div class='top_post_author'>
+            <%= @author.where(id: @top_guide.user_id).first.nickname.blank? ?
+                    @author.where(id: @top_guide.user_id).first.email : @author.where(id: @top_guide.user_id).first.nickname
+            %>
+          </div>
+        <% end %>
+      </div>
+      <div class='top_post_snippet'>
+        <%= @top_guide.snippet %>
+      </div>
+      <%= link_to post_path(@top_guide), method: :get do %>
+        <button class="read_more_btt">
+          READ FULL ARTICLE
+        </button>
       <% end %>
     </div>
-    <div class='top_post_author_container'>
-      <div class='top_post_time'>
-        <%= @top_news.created_at.strftime("%F") + ' | ' %>
-      </div>
-      <%= link_to user_path(@top_news.user_id), method: :get do %>
-      <div class='top_post_author'>
-        <%= @author.where(id: @top_news.user_id).first.nickname.blank? ?
-                @author.where(id: @top_news.user_id).first.email : @author.where(id: @top_news.user_id).first.nickname
-        %>
-      </div>
-      <% end %>
-    </div>
-    <div class='top_post_snippet'>
-      <%= @top_news.snippet %>
-    </div>
-    <%= link_to post_path(@top_news), method: :get do %>
-      <button class="read_more_btt">
-        READ FULL ARTICLE
-      </button>
-    <% end %>
   </div>
 
 
-  <div class='right_half'>
-    <div class='top_post_image_container'>
-      <div class='hover_zoom_in'>
-        <%= link_to post_path(@top_guide), method: :get do %>
-          <figure>
-            <%= image_tag(@post_images.where(post_id: @top_guide.id).first.image.url, :class => 'top_post_image') %>
-          </figure>
-        <% end %>
-      </div>
-      <div class='trapezoid_tag'>
-      </div>
-      <%= link_to guides_index_path, method: :get do %>
-        <div class='category_tag'>
-          GUIDE
-        </div>
-      <% end %>
-      <div class='top_post_title_background'>
-      </div>
-      <%= link_to post_path(@top_guide), method: :get do %>
-        <div class='top_post_title'>
-          <%= @top_guide.title %>
-        </div>
-      <% end %>
+  <div class = 'home_all_news_container'>
+    <div class = 'left_content_title'>
+      All News
     </div>
-    <div class='top_post_author_container'>
-      <div class='top_post_time'>
-        <%= @top_guide.created_at.strftime("%F") + ' | ' %>
-      </div>
-      <%= link_to user_path(@top_guide.user_id), method: :get do %>
-        <div class='top_post_author'>
-          <%= @author.where(id: @top_guide.user_id).first.nickname.blank? ?
-                  @author.where(id: @top_guide.user_id).first.email : @author.where(id: @top_guide.user_id).first.nickname
-          %>
-        </div>
-      <% end %>
-    </div>
-    <div class='top_post_snippet'>
-      <%= @top_guide.snippet %>
-    </div>
-    <%= link_to post_path(@top_guide), method: :get do %>
-      <button class="read_more_btt">
-        READ FULL ARTICLE
-      </button>
-    <% end %>
   </div>
 </div>
 

@@ -83,6 +83,7 @@
 }
 
 .top_post_title{
+  width:100%;
   height: $home_post_title_height;
   position: absolute;
   bottom:0px;
@@ -96,7 +97,16 @@
   color:$home_post_title_color;
 }
 
-.top_post_title:hover {
+.top_post_title_scroll_text {
+  width: 100%;
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(0);
+  transition: 1s;
+}
+
+.top_post_title_scroll_text:hover {
+  transform: translateX(calc(390px - 100%));
   text-decoration: underline;
 }
 
@@ -156,4 +166,8 @@
 
 .read_more_btt:hover {
   text-decoration: underline;
+}
+
+.home_all_news_container {
+  position: relative;
 }

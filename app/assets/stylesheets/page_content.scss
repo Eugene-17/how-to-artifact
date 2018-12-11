@@ -28,6 +28,7 @@ body{
 
 
 .right_sidebar_title, .left_content_title{
+  height:100px;
   width: 100%;
   padding-left:33px;
   padding-top:33px;
@@ -38,10 +39,16 @@ body{
 }
 
 
+.content_container{
+  position: relative;
+  overflow: auto;
+}
+
 .left_content{
   float: left;
   width: 66.6666666667%;
   vertical-align: baseline;
+
 
   .left_half{
     float: left;
@@ -58,9 +65,6 @@ body{
   }
 }
 
-.left_content_title{
-
-}
 
 .right_sidebar{
   float: left;
@@ -107,3 +111,4 @@ body{
     padding-left: 20px;
   }
 }
+

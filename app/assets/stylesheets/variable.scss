@@ -17,6 +17,10 @@ $form-bg: #13232f;
 $stary_background: image-url('stary_background2.jpg');
 $content_background: image-url('page_inner.jpg');
 
+$image-height-tiny: 193px;
+$image-height-small: 225px;
+
+
 ////////////
 //Variable//
 ////////////
@@ -54,8 +58,7 @@ $br: 4px;
 // Home
 
 $site_title_color: $color-artifact-light;
-
-$home_post_cell_height: 225px;
+$home_post_cell_height: $image-height-small;
 
 $content_title_color: $color-white;
 $content_title_font: 'Montserrat', sans-serif;
@@ -80,8 +83,16 @@ $read_more_btt_height: 43px;
 $read_more_btt_background: $color-artifact;
 $read_more_btt_font_color: $color-white;
 
+// Post
 
+$news-cell-height: $image-height-tiny;
+$news-cell-background: $color-black-heavy;
+$news-cell-spacing: 37px;
 
+$news-cell-title-height: $image-height-tiny*0.2;
+$news-cell-title-background: $news-cell-background;
+$news-cell-title-font-size: 1.3em;
+$news-cell-title-font-color: $color-artifact-light;
 
-
-
+$news-cell-snippet-height: $image-height-tiny*0.8;
+$news-cell-snippet-background: $news-cell-background;
