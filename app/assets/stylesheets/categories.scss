@@ -1,3 +1,304 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'variable';
+/*----------------------------------------------------------------------------*/
+/*---- top article ----*/
+/*----------------------------------------------------------------------------*/
+
+.top_article_container{
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.top_article_image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.mas-big{
+  height: 450px;
+}
+.masonry-sm{
+  height: 223px;
+}
+.mas-m{
+  margin-right: -2px;
+  margin-left: -2px;
+}
+.mas-m-b{
+  margin-bottom: 4px;
+}
+.mas-p{
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+.mas-item,
+.blog-item{
+  position: relative;
+  overflow: hidden;
+}
+.mas-item figure,
+.blog-item figure{
+  background: #000;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.mas-item figure img,
+.blog-item figure img{
+  margin: 0 auto;
+  opacity: .9;
+  position: absolute;
+  left: -9999px;
+  right: -9999px;
+  width: 100%;
+}
+.mas-text,
+.mas-details,
+.mas-text .post-cat a,
+.mas-text .post-cat a:before{
+  -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.mas-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.4);
+}
+.mas-big .mas-text{
+  padding: 30px;
+}
+.mas-title {
+  margin: 0;
+  line-height: 23px;
+}
+.mas-big .mas-title{
+  font-size: 25px;
+  line-height: 28px;
+}
+.mas-title a{
+  color: #fff;
+}
+.mas-details{
+  overflow: hidden;
+  max-height: 0;
+
+}
+.mas-item:hover .mas-details{
+  max-height: 100px;
+}
+.mas-text .post-cat{
+  margin: 0 0 5px;
+}
+.post_header .post-cat a,
+.mas-text .post-cat,
+.blog-text .post-cat,
+.grid_post .post-cat {
+  margin: 0 0 10px;
+}
+.post_header .post-cat a,
+.mas-text .post-cat a,
+.blog-text .post-cat a,
+.grid-masonry .post-cat a,
+.details-header .post-cat a {
+  padding: 2px 7px;
+}
+.post_header .post-cat a,
+.mas-text .post-cat a,
+.blog-text .post-cat a,
+.mas-details p,
+.card-post .entry-meta span,
+.card-post .entry-meta span a,
+.card-post .post-cat a,
+.details-header .post-cat a{
+  color: #fff;
+}
+.post_header .post-cat a:before,
+.mas-text .post-cat a:before,
+.blog-text .post-cat a:before,
+.grid-masonry .post-cat a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  bottom: -3px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 4px solid $color-artifact;
+  border-right: 4px solid $color-artifact;
+  border-top: 4px solid transparent;
+  border-left: 4px solid transparent;
+  background-color: transparent !important;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.mas-details p{
+  margin: 10px 0;
+}
+.mas-item:hover .mas-text .post-cat a{
+  background-color: #222;
+}
+.mas-text:hover .post-cat a:before{
+  border-bottom: 4px solid #222;
+  border-right: 4px solid #222;
+}
+.read-more {
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+}
+
+.masonry-slide1.owl-theme .owl-controls,
+.masonry-slide2.owl-theme .owl-controls,
+.masonry-slide3.owl-theme .owl-controls,
+.masonry-slide4.owl-theme .owl-controls{
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  right: 7px;
+}
+/*----------------------------------------------------------------------------*/
+/*---- News list ----*/
+/*----------------------------------------------------------------------------*/
+
+
+.news_list_container{
+  width: 100%;
+  padding-top: 50px;
+}
+
+.news_cell_container{
+  padding-top: $news-cell-spacing;
+  position: relative;
+  overflow: auto;
+}
+.news_cell{
+  width: 100%;
+  height: $news-cell-height;
+  overflow: hidden;
+}
+
+
+.news_cell_image_container{
+  float: left;
+  width: 40%;
+  vertical-align: baseline;
+  display:block;
+  overflow: hidden;
+}
+
+.news_cell_image{
+  width: 100%;
+  height: $news-cell-height;
+  border-radius: 8px;
+}
+
+.hover_zoom_in figure img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.hover_zoom_in figure:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.news_cell_content_container{
+  position: relative;
+  float: left;
+  padding-left: $news-cell-container-padding-left;
+  width: 60%;
+  vertical-align: baseline;
+  display:block;
+  height: $news-cell-height;
+}
+
+.news_cell_title_background{
+  position: absolute;
+  top:0px;
+  background: $news-cell-title-background;
+  opacity: 0.7;
+  width: calc(100% - 20px);
+  height:$news-cell-title-height;
+}
+
+.news_cell_title{
+  overflow: hidden;
+  position: absolute;
+  top:0px;
+  width: 100%;
+  height:$news-cell-title-height;
+  line-height: $news-cell-title-height;
+  font-size: $news-cell-title-font-size;
+  color: $news-cell-title-font-color;
+}
+
+.news_cell_title_scroll_text {
+  width: 100%;
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(0);
+  transition: 1s;
+}
+
+.news_cell_title_scroll_text:hover {
+  transform: translateX(calc(460px - 100%));
+}
+
+.news_cell_author_container{
+  height: $news-cell-author-height;
+  background: $home_post_author_background;
+  position: absolute;
+  top:$news-cell-title-height;
+  overflow:hidden;
+  width: 100%;
+}
+
+.news_cell_time{
+  float: left;
+  font-size: 0.9em;
+  line-height: 1.1em;
+  padding-top:10px;
+  padding-left:10px;
+  color: $home_post_time_color;
+}
+
+.news_cell_author{
+  float: left;
+  font-size: 0.9em;
+  line-height: 1.1em;
+  padding-top:10px;
+  padding-left:5px;
+  color: $home_post_author_color;
+}
+
+.news_cell_author:hover {
+  text-decoration: underline;
+}
+
+.news_cell_snippet{
+  background: $news-cell-snippet-background;
+  position: absolute;
+  bottom: 0px;
+  width: calc(100% - 20px);
+  height:$news-cell-snippet-height;
+  text-indent: 30px;
+  text-align : justify;
+}

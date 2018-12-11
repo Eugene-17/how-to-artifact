@@ -1,0 +1,2 @@
+class RightSidebarController < ApplicationController
+end

@@ -30,10 +30,16 @@
       </button>
     <% end %>
 
-    <%= link_to news_index_path, method: :get do %>
-    <button class="top_nav_button">
-      NEWS
-    </button>
+    <%= link_to category_path(2), method: :get do %>
+      <button class="top_nav_button">
+        GUIDE
+      </button>
+    <% end %>
+
+    <%= link_to category_path(1), method: :get do %>
+      <button class="top_nav_button">
+        NEWS
+      </button>
     <% end %>
 
   </div>

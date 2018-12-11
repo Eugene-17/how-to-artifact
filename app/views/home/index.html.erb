@@ -16,7 +16,7 @@
 <div class='left_content'>
 
   <div class = 'left_content_title'>
-    Featured Artifact News
+    Featured How to Artifact Posts
   </div>
 
   <div class = 'content_container'>
@@ -31,9 +31,9 @@
         </div>
         <div class='trapezoid_tag'>
         </div>
-        <%= link_to news_index_path, method: :get do %>
+        <%= link_to @top_news.category, method: :get do %>
           <div class='category_tag'>
-            NEWS
+            <%= @top_news.category.category_name.upcase%>
           </div>
         <% end %>
         <div class='top_post_title_background'>
@@ -80,9 +80,9 @@
         </div>
         <div class='trapezoid_tag'>
         </div>
-        <%= link_to guides_index_path, method: :get do %>
+        <%= link_to @top_guide.category, method: :get do %>
           <div class='category_tag'>
-            GUIDE
+            <%= @top_guide.category.category_name.upcase%>
           </div>
         <% end %>
         <div class='top_post_title_background'>
@@ -124,12 +124,7 @@
   </div>
 </div>
 
-<div class='right_sidebar'>
-  <div class = 'right_sidebar_title'>
-    Deck of the day
-  </div>
-  COMING SOON
-</div>
+<%= render partial: "right_sidebar/right_sidebar", layout: "right_sidebar/right_sidebar" %>
 
 <div style='height:1000px'>
 

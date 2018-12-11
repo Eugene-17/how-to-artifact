@@ -10,6 +10,10 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @news = Post.where(category_id:@category.id).order(:created_at).reverse_order.page(params[:page])
+    @top_article = Post.where(category_id:@category.id, featured: true).order(:updated_at).first
+    @news_image = PostImage.all
+    @author = User.all
   end
 
   # GET /categories/new

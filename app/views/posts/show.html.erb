@@ -1,3 +1,17 @@
+<div class="left_content">
+  <div class = "post_container">
+    <div class=" post_title left_content_title">
+      <%= @post.title %>
+    </div>
+    <div class="post_snippet">
+      <i><%= @post.snippet %></i>
+    </div>
 
+    <div class="post_body">
+      <%= @post.content.html_safe %>
+      </div>
+  </div>
+</div>
+<%= render partial: "right_sidebar/right_sidebar", layout: "right_sidebar/right_sidebar" %>
 
 
