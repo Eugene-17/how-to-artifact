@@ -1,28 +1,39 @@
-
 <top_nav>
-  <div id = 'overlay' class = 'overlay'></div>
+  <div id='overlay' class='overlay'></div>
   <div id="top_nav" class="top_nav_container">
 
     <%= link_to root_path, method: :get do %>
-    <%= image_tag("logo_gold.png", :class =>"top_nav_logo") %>
+      <%= image_tag("logo_gold.png", :class => "top_nav_logo") %>
     <% end %>
 
     <% if user_signed_in? %>
-      <%= link_to destroy_user_session_path, method: :delete do %>
-        <button class="top_nav_button">
-          SIGN OUT
+      <div class='top_nav_profile_container'>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <button class="top_nav_button">
+            SIGN OUT
+          </button>
+        <% end %>
+
+        <button id='profile-btt' class="top_nav_button">
+          <%= current_user.nickname.upcase %>
+          <ul class="dropdown-menu" id="dropdown-menu"></ul>
         </button>
-      <% end %>
 
-      <% #if current_user.user_role == 1 %>
-      <% #end %>
 
-    <%else %>
+        <% if current_user.role == 1 %>
+          <%= link_to new_post_path, method: :get do %>
+          <button class="top_nav_button">
+            NEW POST
+          </button>
+          <% end %>
+        <% end %>
+      </div>
+    <% else %>
       <button id='login_btt' class="top_nav_button">
         LOGIN/SIGNUP
       </button>
       <%= render partial: 'layouts/login_btt', layout: 'layouts/login_btt' %>
-    <%end %>
+    <% end %>
 
     <%= link_to about_path, method: :get do %>
       <button class="top_nav_button">

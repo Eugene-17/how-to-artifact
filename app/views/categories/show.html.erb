@@ -4,6 +4,7 @@
   <div class='left_content_title'>
     NEWS
   </div>
+
   <% if @news.count > 0 %>
     <% if @news.first_page? %>
       <div class="top_article_container">
@@ -74,10 +75,12 @@
         </div>
 
 
+
       <% end %>
       <%= paginate @news %>
+    </div>
   <% end %>
-  </div>
+
 </div>
 
 <%= render partial: "right_sidebar/right_sidebar", layout: "right_sidebar/right_sidebar" %>

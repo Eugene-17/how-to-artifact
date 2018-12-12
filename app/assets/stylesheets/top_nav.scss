@@ -62,5 +62,12 @@ top_nav {
   }
 }
 
-
+.top_nav_profile_container{
+  height:100%;
+  overflow:hidden;
+  float: right;
+  background-color: $top_nav_background;
+  min-width: $top_nav_height*$golden;
+  width:auto;
+}
 

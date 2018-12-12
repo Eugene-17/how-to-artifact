@@ -3,11 +3,15 @@
     <div class=" post_title left_content_title">
       <%= @post.title %>
     </div>
+    <%= link_to('edit post', edit_post_path, method: :get)  %>
     <div class="post_snippet">
       <i><%= @post.snippet %></i>
     </div>
 
     <div class="post_body">
+      <div class = 'fr-view'>
+        <%=@post.content %>
+      </div>
       <%= @post.content.html_safe %>
       </div>
   </div>

@@ -6,7 +6,10 @@
 
 #= require 'top_nav'
 #= require 'login'
+#= require 'posts'
 #= require_tree .
+
+#= require froala_editor.min.js
 
 # Include other plugins.
 #= require plugins/align.min.js

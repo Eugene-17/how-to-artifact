@@ -11,7 +11,24 @@
     </div>
   <% end %>
 
+  <%= form.label :title %>
+  <%= form.text_area :content, id:'new_post_editor' %>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<script>
+  // $('new_post_editor').froalaEditable(
+  //     {
+  //         inlineMode: false,
+  //         minHeight: '400px',
+  //         buttons:[
+  //             'bold', 'italic', 'underline', 'formatBlock','align','insertUnorderedList',
+  //             'insertOrderedList', 'outdent', 'indent','createLink','html'
+  //         ],
+  //     }
+  // )
+</script>
