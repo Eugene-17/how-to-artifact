@@ -11,8 +11,11 @@
     </div>
   <% end %>
 
-  <%= form.label :title %>
-  <%= form.text_area :content, :class =>"tinymce", :rows => 40, :cols => 120 %>
+  <%= form.label :title %><br>
+  <%= form.text_field :title %><br>
+  <%= form.label :snippet %><br>
+  <%= form.text_area :snippet %><br>
+  <%= form.text_area :content, :id=>'newpost', :class =>"tinymce post_body_editor" %>
 
 
   <div class="actions">
@@ -21,17 +24,3 @@
 <% end %>
 
 <%= tinymce %>
-
-<script>
-  // $('new_post_editor').froalaEditable(
-  //     {
-  //         inlineMode: false,
-  //         minHeight: '400px',
-  //         buttons:[
-  //             'bold', 'italic', 'underline', 'formatBlock','align','insertUnorderedList',
-  //             'insertOrderedList', 'outdent', 'indent','createLink','html'
-  //         ],
-  //     }
-  // )
-</script>
-

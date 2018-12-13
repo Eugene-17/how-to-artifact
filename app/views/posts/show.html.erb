@@ -1,19 +1,18 @@
 <div class="left_content">
-  <div class = "post_container">
+  <div class="post_container">
     <div class=" post_title left_content_title">
       <%= @post.title %>
     </div>
-    <%= link_to('edit post', edit_post_path, method: :get)  %>
+    <% if current_user.role == 1 or current_user.role == 2 %>
+      <%= link_to('edit post', edit_post_path, method: :get) %>
+    <% end %>
     <div class="post_snippet">
       <i><%= @post.snippet %></i>
     </div>
 
     <div class="post_body">
-      <div class = 'fr-view'>
-        <%=@post.content %>
-      </div>
       <%= @post.content.html_safe %>
-      </div>
+    </div>
   </div>
 </div>
 <%= render partial: "right_sidebar/right_sidebar", layout: "right_sidebar/right_sidebar" %>

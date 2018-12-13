@@ -31,13 +31,3 @@ setInterval (->
   return
 ), 250
 
-dropdown = document.getElementById('profile-btt')
-dropdownMenu = document.getElementById('dropdown-menu')
-activeClass = 'active'
-
-dropdown.onclick = ->
-  if dropdownMenu.classList.contains(activeClass)
-    dropdownMenu.classList.remove activeClass
-  else
-    dropdownMenu.classList.add activeClass
-  return

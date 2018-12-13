@@ -46,6 +46,9 @@ gem 'jquery-rails'
 # html editor
 # gem "wysiwyg-rails"
 gem 'tinymce-rails'
+
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
+
 # some font
 gem "font-awesome-sass"
 
