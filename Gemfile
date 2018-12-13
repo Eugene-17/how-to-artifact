@@ -44,11 +44,10 @@ gem 'bootstrap'
 # js library
 gem 'jquery-rails'
 # html editor
-gem "wysiwyg-rails"
+# gem "wysiwyg-rails"
+gem 'tinymce-rails'
 # some font
 gem "font-awesome-sass"
-
-gem 'tinymce-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
