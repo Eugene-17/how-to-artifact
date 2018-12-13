@@ -25,7 +25,7 @@
         <div class='hover_zoom_in'>
           <%= link_to post_path(@top_news), method: :get do %>
             <figure>
-              <%= image_tag(@post_images.where(post_id: @top_news.id).first.image.url, :class => 'top_post_image') %>
+              <%= image_tag(@top_news.thumbnail.url, :class => 'top_post_image') %>
             </figure>
           <% end %>
         </div>

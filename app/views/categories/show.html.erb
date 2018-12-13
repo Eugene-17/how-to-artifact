@@ -2,7 +2,7 @@
 
 <div class='left_content'>
   <div class='left_content_title'>
-    NEWS
+    <%= @category.category_name %>
   </div>
 
   <% if @news.count > 0 %>
@@ -10,7 +10,7 @@
       <div class="top_article_container">
         <div class="mas-item mas-big">
           <%= link_to @top_article do %>
-            <%= image_tag(@news_image.where(post_id: @top_article.id).first.image.url, :class => "top_article_image image_responsive") %>
+            <%= image_tag(@top_article.thumbnail.url, :class => "top_article_image image_responsive") %>
           <% end %>
           <div class="mas-text">
             <div class="post-cat"><%= link_to(@top_article.category.category_name, categories_path(@top_article.category)) %>
@@ -33,8 +33,8 @@
               <div class='news_cell_image_container'>
                 <div class='hover_zoom_in'>
                   <figure>
-                    <%= @news_image.where(post_id: article.id).exists? ?
-                            image_tag(@news_image.where(post_id: article.id).first.image.url, :class => 'news_cell_image')
+                    <%= article.thumbnail.exists? ?
+                            image_tag(article.thumbnail.url, :class => 'news_cell_image')
                             : image_tag('no_image.png', :class => 'news_cell_image')
                     %>
                   </figure>

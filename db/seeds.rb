@@ -217,18 +217,20 @@ post_list = [
      'THE ARTIFICER\'APPRENTICE: PART 1 (OVERVIEW, CARD TYPES AND COLORS, DECKBUILDING)',
      'Welcome to the Artificer\'s Apprentice series!',
      guide1,
-     true
+     true,
+     '1.jpg'
     ],
     [2,
      'THE ARTIFICER\'S APPRENTICE: PART 2 (BOARD POSITIONING, GAME FLOW)',
       'Welcome to part 2 of our Artificer\'s Apprentice guides!',
      guide2,
-     true
+     true,
+     '2.jpg'
     ],
 ]
 
-post_list.each do |category_id, title, snippet, article, featured|
-  Post.create(category_id: category_id, user_id: 1, title: title, snippet: snippet, content: article, featured: featured)
+post_list.each do |category_id, title, snippet, article, featured, thumbnail|
+  Post.create(category_id: category_id, user_id: 1, title: title, snippet: snippet, content: article, featured: featured, thumbnail: seed_image(thumbnail))
 end
 
 post_image_list = [
