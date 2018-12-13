@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get 'news', to: 'news#index', as: :news_index
   get 'guides', to: 'guides#index', as: :guides_index
   get "*path" => redirect("/")
+  post '/tinymce_assets' => 'tinymce_assets#create'
 end

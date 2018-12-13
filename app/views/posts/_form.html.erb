@@ -10,12 +10,19 @@
       </ul>
     </div>
   <% end %>
-
+  <%= form.label :category_id %><br>
+  <%= form.number_field :category_id %><br>
   <%= form.label :title %><br>
   <%= form.text_field :title %><br>
   <%= form.label :snippet %><br>
   <%= form.text_area :snippet %><br>
-  <%= form.text_area :content, :id=>'newpost', :class =>"tinymce post_body_editor" %>
+  <%= form.label :thumbnail %><br>
+  <%= form.file_field :thumbnail%><br>
+  <%= form.label :content %><br>
+  <div class = 'editor_container'>
+    <%= form.text_area :content, :class =>"html_editor tinymce" %><br>
+  </div>
+
 
 
   <div class="actions">

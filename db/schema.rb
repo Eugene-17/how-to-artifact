@@ -10,13 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_13_160723) do
+ActiveRecord::Schema.define(version: 2018_12_13_205401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string "category_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "alt", default: ""
+    t.string "hint", default: ""
+    t.string "file_file_name"
+    t.string "file_content_type"
+    t.integer "file_file_size"
+    t.datetime "file_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,8 +48,8 @@ ActiveRecord::Schema.define(version: 2018_12_13_160723) do
     t.text "snippet"
     t.text "content"
     t.boolean "featured"
-    t.bigint "user_id"
-    t.bigint "category_id"
+    t.bigint "user_id", default:"1"
+    t.bigint "category_id", default:"1"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "thumbnail_file_name"
