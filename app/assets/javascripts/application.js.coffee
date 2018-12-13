@@ -9,6 +9,8 @@
 #= require 'posts'
 #= require_tree .
 
+#= require tinymce
+
 #= require froala_editor.min.js
 
 # Include other plugins.

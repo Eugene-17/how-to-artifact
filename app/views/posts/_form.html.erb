@@ -12,13 +12,15 @@
   <% end %>
 
   <%= form.label :title %>
-  <%= form.text_area :content, id:'new_post_editor' %>
+  <%= form.text_area :content, :class =>"tinymce", :rows => 40, :cols => 120 %>
 
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<%= tinymce %>
 
 <script>
   // $('new_post_editor').froalaEditable(
@@ -32,3 +34,4 @@
   //     }
   // )
 </script>
+
