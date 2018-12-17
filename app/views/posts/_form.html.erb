@@ -12,7 +12,7 @@
   <% end %>
   <%= form.hidden_field :user_id, :value => current_user.id %>
   <%= form.label :category_id %><br>
-  <% options = options_from_collection_for_select(@categories, 'id', 'category_name') %>
+  <% options = options_from_collection_for_select(@categories, 'id', 'category_name', @post.category_id) %>
   <%= form.select :category_id,  options %>
   <br><br>
   <%= form.label :featured %><br>
