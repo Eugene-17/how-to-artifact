@@ -12,18 +12,25 @@
   <% end %>
   <%= form.hidden_field :user_id, :value => current_user.id %>
   <%= form.label :category_id %><br>
-  <%= form.number_field :category_id %><br>
-  <%= form.label :title %><br>
-  <%= form.text_field :title %><br>
+  <% options = options_from_collection_for_select(@categories, 'id', 'category_name') %>
+  <%= form.select :category_id,  options %>
+  <br><br>
+  <%= form.label :featured %><br>
+  <%= form.radio_button :featured, true %>
+  <%= form.label 'true' %>
+  <%= form.radio_button :featured, false , :checked => true %>
+  <%= form.label 'false' %><br>
+
+  <%= form.label :title%><br>
+  <%= form.text_field :title, :class =>"post_text_field"  %><br>
   <%= form.label :snippet %><br>
-  <%= form.text_area :snippet %><br>
+  <%= form.text_area :snippet, :class =>"post_text_field" %><br>
   <%= form.label :thumbnail %><br>
   <%= form.file_field :thumbnail%><br>
   <%= form.label :content %><br>
   <div class = 'editor_container'>
     <%= form.text_area :content, :class =>"html_editor tinymce" %><br>
   </div>
-
 
   <div class="actions">
     <%= form.submit %>
