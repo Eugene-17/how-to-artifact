@@ -10,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+  <%= form.hidden_field :user_id, :value => current_user.id %>
   <%= form.label :category_id %><br>
   <%= form.number_field :category_id %><br>
   <%= form.label :title %><br>
@@ -22,7 +23,6 @@
   <div class = 'editor_container'>
     <%= form.text_area :content, :class =>"html_editor tinymce" %><br>
   </div>
-
 
 
   <div class="actions">
