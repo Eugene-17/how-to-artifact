@@ -10,7 +10,10 @@
       <div class="top_article_container">
         <div class="mas-item mas-big">
           <%= link_to @top_article do %>
-            <%= image_tag(@top_article.thumbnail.url, :class => "top_article_image") %>
+            <%= @top_article.thumbnail.exists? ?
+                    image_tag(@top_article.thumbnail.url, :class => "top_article_image")
+                    : image_tag('no_image.png', :class => "top_article_image")
+            %>
           <% end %>
           <div class="mas-text">
             <div class="post-cat"><%= link_to(@top_article.category.category_name, categories_path(@top_article.category)) %>

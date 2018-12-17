@@ -1,6 +1,6 @@
 toolbar:
-  - styleselect | bold italic | undo redo
-  - image | link
+  - undo redo | bold italic underline strikethrough | styleselect | alignleft aligncenter alignright alignjustify
+  - fontselect fontsizeselect | image | link
   - uploadimage
 plugins:
   - image
