@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 2018_12_13_205401) do
     t.text "snippet"
     t.text "content"
     t.boolean "featured"
-    t.bigint "user_id", default:"1"
-    t.bigint "category_id", default:"1"
+    t.bigint "user_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "thumbnail_file_name"
