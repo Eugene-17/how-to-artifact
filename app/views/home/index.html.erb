@@ -74,10 +74,10 @@
 
     <div class='right_half'>
       <div class='top_post_image_container'>
-        <div class='hover_zoom_in'>
+        <div class='hover_zoom_in'>git
           <%= link_to post_path(@top_guide), method: :get do %>
             <figure>
-              <%= image_tag(@post_images.where(post_id: @top_guide.id).first.image.url, :class => 'top_post_image') %>
+              <%= image_tag( @top_guide.thumbnail.url, :class => 'top_post_image') %>
             </figure>
           <% end %>
         </div>
