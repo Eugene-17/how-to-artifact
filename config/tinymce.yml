@@ -1,11 +1,12 @@
 toolbar:
   - undo redo | bold italic underline strikethrough | styleselect | alignleft aligncenter alignright alignjustify
-  - fontselect fontsizeselect | image | link
+  - fontselect fontsizeselect | image | link | table
   - uploadimage
 plugins:
   - image
   - link
   - uploadimage
+  - table
 
 relative_urls : false
 remove_script_host : false
