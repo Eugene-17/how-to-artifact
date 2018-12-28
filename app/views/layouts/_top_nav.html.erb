@@ -14,11 +14,11 @@
           </button>
         <% end %>
 
+        <%= link_to current_user, method: :get do %>
         <button id='profile-btt' class="top_nav_button">
           <%= current_user.nickname.upcase %>
-          <ul class="dropdown-menu" id="dropdown-menu"></ul>
         </button>
-
+        <% end %>
 
         <% if current_user.role == 1 %>
           <%= link_to new_post_path, method: :get do %>

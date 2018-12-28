@@ -10,7 +10,9 @@
     <% end %>
     <div class="post_snippet">
       <i><%= @post.snippet %></i>
-    </div>
+    </div><br>
+
+    <%= image_tag(@post.thumbnail.url, :class => 'post_thumbnail') %>
 
     <div class="post_body">
       <%= @post.content.html_safe %>
