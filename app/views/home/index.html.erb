@@ -77,7 +77,10 @@
         <div class='hover_zoom_in'>git
           <%= link_to post_path(@top_guide), method: :get do %>
             <figure>
-              <%= image_tag( @top_guide.thumbnail.url, :class => 'top_post_image') %>
+              <%= @top_guide.thumbnail.exists? ?
+                      image_tag(@top_guide.thumbnail.url, :class => "top_post_image")
+                      : image_tag('no_image.png', :class => "top_post_image")
+              %>
             </figure>
           <% end %>
         </div>
