@@ -1,0 +1,22 @@
+<%= form_with(model: banner, local: true) do |form| %>
+  <% if banner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(banner.errors.count, "error") %> prohibited this banner from being saved:</h2>
+
+      <ul>
+      <% banner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.label :link %><br>
+  <%= form.text_field :link, :class =>"banner-text-field"  %><br>
+
+  <%= form.label :image %><br>
+  <%= form.file_field :image%><br>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

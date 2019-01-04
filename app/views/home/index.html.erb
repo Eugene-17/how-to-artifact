@@ -1,6 +1,6 @@
 <% content_for :title, "How To Artifact" %>
 
-
+<%if @banners.count == 0  %>
 <div id='home_top_image_container'>
   <%= image_tag('home_top_image.jpg', :id => 'home_top_image') %>
   <div id='top_image_text'>
@@ -12,6 +12,10 @@
     </div>
   </div>
 </div>
+<%else%>
+  <%= render partial: "layouts/banner", layout: "layouts/banner" %>
+<%end%>
+
 
 <div class='left_content'>
 
@@ -20,6 +24,7 @@
   </div>
 
   <div class = 'content_container'>
+    <% unless @top_news.nil? %>
     <div class='left_half'>
       <div class='top_post_image_container'>
         <div class='hover_zoom_in'>
@@ -70,8 +75,8 @@
         </button>
       <% end %>
     </div>
-
-
+    <% end %>
+    <% unless @top_guide.nil? %>
     <div class='right_half'>
       <div class='top_post_image_container'>
         <div class='hover_zoom_in'>
@@ -120,6 +125,7 @@
         </button>
       <% end %>
     </div>
+    <% end %>
   </div>
 
 

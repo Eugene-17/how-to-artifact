@@ -14,17 +14,25 @@
           </button>
         <% end %>
 
-        <%= link_to current_user, method: :get do %>
-        <button id='profile-btt' class="top_nav_button">
-          <%= current_user.nickname.upcase %>
-        </button>
+        <% if current_user.role == 1 %>
+          <%= link_to admin_path, method: :get do %>
+            <button id='profile-btt' class="top_nav_button">
+              <%= current_user.nickname.upcase %>
+            </button>
+          <% end %>
+        <% else %>
+          <%= link_to current_user, method: :get do %>
+            <button id='profile-btt' class="top_nav_button">
+              <%= current_user.nickname.upcase %>
+            </button>
+          <% end %>
         <% end %>
 
         <% if current_user.role == 1 %>
           <%= link_to new_post_path, method: :get do %>
-          <button class="top_nav_button">
-            NEW POST
-          </button>
+            <button class="top_nav_button">
+              NEW POST
+            </button>
           <% end %>
         <% end %>
       </div>
