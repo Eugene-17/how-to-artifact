@@ -14,10 +14,20 @@
           </button>
         <% end %>
 
+        <div class="dropdown">
+          <button class="top_nav_button">DROPDOWN
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+
         <% if current_user.role == 1 %>
           <%= link_to admin_path, method: :get do %>
             <button id='profile-btt' class="top_nav_button">
-              <%= current_user.nickname.upcase %>
+              <%= current_user.nickname %>
             </button>
           <% end %>
         <% else %>
