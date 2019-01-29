@@ -33,7 +33,7 @@
         <% else %>
           <%= link_to current_user, method: :get do %>
             <button id='profile-btt' class="top_nav_button">
-              <%= current_user.nickname.upcase %>
+              <%= current_user.email %>
             </button>
           <% end %>
         <% end %>

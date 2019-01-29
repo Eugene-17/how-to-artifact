@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b8c358a-a024-486e-a3dd-631c93856c6a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_top_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_top_nav.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="8b8c358a-a024-486e-a3dd-631c93856c6a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -105,7 +103,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_top_nav.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="318">
               <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
             </state>
           </provider>
@@ -377,18 +375,17 @@
       <workItem from="1546599193087" duration="10754000" />
       <workItem from="1546620198950" duration="5050000" />
       <workItem from="1546671340066" duration="4747000" />
-      <workItem from="1548757385616" duration="345000" />
+      <workItem from="1548757385616" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32221000" />
+    <option name="totallyTimeSpent" value="32483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1337953" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1337953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32917964" />
@@ -402,7 +399,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32917964" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.68400663" visible="true" weight="0.34131113" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.68400663" visible="true" weight="0.34131113" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50053304" side_tool="true" weight="0.32882413" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49946696" weight="0.3236212" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -675,7 +672,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_top_nav.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="318">
           <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
         </state>
       </provider>
