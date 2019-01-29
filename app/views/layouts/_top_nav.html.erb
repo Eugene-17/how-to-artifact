@@ -27,7 +27,7 @@
         <% if current_user.role == 1 %>
           <%= link_to admin_path, method: :get do %>
             <button id='profile-btt' class="top_nav_button">
-              <%= current_user.nickname %>
+              <%= current_user.email %>
             </button>
           <% end %>
         <% else %>
